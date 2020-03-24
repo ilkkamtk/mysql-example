@@ -6,7 +6,7 @@ const pool = require('./database/db');
 
 app.get('/test', async (req, res) => {
   try {
-    const [rows, fields] = await pool.query('SELECT * FROM table');
+    const [rows, fields] = await pool.query('SELECT * FROM someTable');
     console.log('rows', rows);
     console.log('fields', fields);
     res.json(rows);
